@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+li {
+    margin: 0 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00f5d4;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #00f5d4;
+    object-fit: cover;
+    box-shadow: 0 0 25px rgba(0, 245, 212, 0.6);
+    transition: 0.4s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+#about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.skill {
+    margin: 25px 0;
+    text-align: left;
+}
+
+.skill p {
+    margin-bottom: 8px;
+}
+
+.bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.line {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00f5d4, #00bbf9);
+    width: 0;
+    animation: load 2s forwards;
+}
+
+.java { width: 70%; }
+.python { width: 75%; }
+.html { width: 85%; }
+.css { width: 80%; }
+
+@keyframes load {
+    to {
+        width: inherit;
+    }
+}
+
+form {
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    background: #00f5d4;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00bbf9;
+    transform: scale(1.05);
+}
+
+#contact a {
+    color: #00f5d4;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
